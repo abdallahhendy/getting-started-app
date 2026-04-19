@@ -20,7 +20,7 @@ jobs:
         uses: docker/login-action@v4
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: ${{ github.actor }}       # Username must be lowercase
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Push the Image
         uses: docker/build-push-action@v7
